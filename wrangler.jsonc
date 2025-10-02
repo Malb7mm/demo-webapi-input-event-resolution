@@ -1,0 +1,9 @@
+{
+	"name": "demo-webapi-input-event-resolution",
+	"main": ".svelte-kit/cloudflare/_worker.js",
+	"compatibility_date": "2025-10-02",
+	"assets": {
+		"binding": "ASSETS",
+		"directory": ".svelte-kit/cloudflare",
+	}
+}

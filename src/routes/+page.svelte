@@ -21,6 +21,7 @@
       prev = now;
     });
     document.addEventListener("pointerdown", (e) => {
+      e.preventDefault();
       const now = Math.floor(e.timeStamp);
       const diff = now - prev;
       logs.push({
@@ -30,6 +31,9 @@
         logs.shift();
       }
       prev = now;
+    });
+    document.addEventListener("pointermove", (e) => {
+      e.preventDefault();
     });
   });
 </script>
@@ -53,5 +57,13 @@
 <style>
   p {
     margin: 0.4rem 0;
+  }
+  :global(body) {
+    touch-action: none;
+    overscroll-behavior: none;
+    user-select: none;
+    -webkit-user-drag: none;
+    height: 100vh;
+    width: 100vw;
   }
 </style>
